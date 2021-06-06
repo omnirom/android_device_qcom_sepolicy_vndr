@@ -66,6 +66,9 @@
 /(vendor|system/vendor)/bin/StoreKeybox         u:object_r:sectest_exec:s0
 /(vendor|system/vendor)/bin/InstallKeybox                       u:object_r:sectest_exec:s0
 
+#context for debugutils HAL
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.debugutils@1\.0-service        u:object_r:vendor_hal_debugutils_default_exec:s0
+
 #Authentication and FIDO
 /(vendor|system/vendor)/bin/sampleauthdaemon    u:object_r:fidotest_exec:s0
 /(vendor|system/vendor)/bin/qseeproxysampledaemon u:object_r:qseeproxysample_exec:s0
@@ -89,6 +92,9 @@
 /(vendor|system/vendor)/bin/test-fake-ap                        u:object_r:location_exec:s0
 /(vendor|system/vendor)/bin/loc_api_app                         u:object_r:location_exec:s0
 /(vendor|system/vendor)/bin/test_loc_api_client                 u:object_r:location_exec:s0
+
+#Context for hang_guard
+/(vendor|system/vendor)/bin/hang_guard        u:object_r:hang_guard_exec:s0
 
 /(vendor|system/vendor)/bin/sns.*               u:object_r:sensors_test_exec:s0
 #for testscripts support

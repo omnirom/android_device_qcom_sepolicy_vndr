@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -37,9 +37,7 @@
 /dev/spdaemon_ssr                     u:object_r:vendor_spdaemon_ssr_device:s0
 /dev/spss_utils                       u:object_r:vendor_spss_utils_device:s0
 /dev/spu_hal_ssr                      u:object_r:vendor_spu_hal_ssr_device:s0
-/dev/iuicc                            u:object_r:vendor_iuicc_device:s0
-/dev/iuicc0                           u:object_r:vendor_iuicc_device:s0
-/dev/iuicc1                           u:object_r:vendor_iuicc_device:s0
+/dev/iuicc.*                          u:object_r:vendor_iuicc_device:s0
 /dev/cryptoapp                        u:object_r:vendor_cryptoapp_device:s0
 /dev/sec_nvm_.*                       u:object_r:vendor_sec_nvm_device:s0
 /dev/qbt.*                            u:object_r:vendor_qbt_device:s0
@@ -139,6 +137,7 @@
 /vendor/bin/hw/android\.hardware\.usb\.gadget\@1\.[0-2]-service-qti                u:object_r:vendor_hal_usb_qti_exec:s0
 /vendor/bin/vendor\.qti\.qspmhal@1\.0-service                                      u:object_r:vendor_hal_qspmhal_default_exec:s0
 /(vendor|system/vendor)/bin/mutualex                                               u:object_r:vendor_mutualex_exec:s0
+/vendor/bin/modemManager                                                           u:object_r:vendor_modem_manager_exec:s0
 
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.qccvndhal@1\.0-service       u:object_r:vendor_hal_qccvndhal_qti_exec:s0
 
@@ -151,6 +150,7 @@
 /(vendor|system/vendor)/bin/garden_app                                             u:object_r:vendor_location_exec:s0
 /(vendor|system/vendor)/bin/DR_AP_Service                                          u:object_r:vendor_location_exec:s0
 /(vendor|system/vendor)/bin/slim_daemon                                            u:object_r:vendor_location_exec:s0
+/(vendor|system/vendor)/bin/edgnss-daemon                                          u:object_r:vendor_location_exec:s0
 
 #bluetooth
 /vendor/bin/hw/vendor\.qti\.hardware\.bluetooth_dun@1\.0-service                   u:object_r:vendor_hal_bluetooth_dun_qti_exec:s0
@@ -225,14 +225,20 @@
 #
 # libmmi_jni
 /vendor/lib(64)?/libmmi_jni\.so             u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/vendor\.qti\.hardware\.perf@2\.0\.so    u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/vendor\.qti\.hardware\.perf@2\.1\.so    u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/vendor\.qti\.hardware\.perf@2\.2\.so    u:object_r:same_process_hal_file:s0
 
 # SVA files
 /vendor/lib(64)?/liblistenjni\.so          u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/liblistensoundmodel2\.so  u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/vendor.qti.qspmhal@1.0\.so  u:object_r:same_process_hal_file:s0
 
+# Perf
+/vendor/lib(64)?/vendor\.qti\.hardware\.perf@2\.0\.so    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor\.qti\.hardware\.perf@2\.1\.so    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor\.qti\.hardware\.perf@2\.2\.so    u:object_r:same_process_hal_file:s0
+
 #wifilearner daemon
 /(vendor|system/vendor)/bin/wifilearner    u:object_r:vendor_wifilearnersvc_exec:s0
+
+#wificfr daemon
+/(vendor|system/vendor)/bin/wificfrtool    u:object_r:wificfrsvc_exec:s0
+

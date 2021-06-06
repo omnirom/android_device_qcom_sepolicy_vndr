@@ -120,9 +120,9 @@
 /vendor/bin/hw/android\.hardware\.vr@1\.0-service.crosshatch      u:object_r:hal_vr_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.fpc u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android.hardware.thermal@2.0-service.qti      u:object_r:hal_thermal_default_exec:s0
+/vendor/bin/hw/vendor.qti.hardware.limits@1.0-service      u:object_r:vendor_hal_limits_qti_exec:s0
 /vendor/bin/thermal-engine      u:object_r:vendor_thermal-engine_exec:s0
-/vendor/bin/sensors.qcom        u:object_r:vendor_sensors_exec:s0
-/vendor/bin/sensors.qti         u:object_r:vendor_sensors_exec:s0
+/vendor/bin/sensors.qti         u:object_r:vendor_sensors_qti_exec:s0
 /vendor/bin/ssr_setup           u:object_r:vendor_ssr_setup_exec:s0
 /vendor/bin/ssr_diag            u:object_r:vendor_ssr_diag_exec:s0
 /vendor/bin/pm-service          u:object_r:vendor_per_mgr_exec:s0
@@ -159,7 +159,6 @@
 /vendor/bin/cnd                 u:object_r:vendor_cnd_exec:s0
 /vendor/bin/oemlock_provision   u:object_r:hal_bootctl_default_exec:s0
 /vendor/bin/oemlock-bridge      u:object_r:hal_bootctl_default_exec:s0
-/vendor/bin/diag-router         u:object_r:vendor_diag-router_exec:s0
 /(vendor|system/vendor)/bin/msm_irqbalance u:object_r:vendor_msm_irqbalanced_exec:s0
 /vendor/bin/hw/android\.hardware\.usb@1\.1-service.crosshatch             u:object_r:hal_usb_default_exec:s0
 /vendor/bin/chre                u:object_r:vendor_chre_exec:s0
@@ -173,6 +172,7 @@
 /vendor/bin/hw/qcrilNrd         u:object_r:rild_exec:s0
 /vendor/bin/hw/android\.hardware\.drm@1\.0-service.widevine          u:object_r:vendor_hal_drm_widevine_exec:s0
 /vendor/bin/hw/android\.hardware\.vibrator@1\.1-service.crosshatch        u:object_r:hal_vibrator_default_exec:s0
+/vendor/bin/hw/android\.hardware\.identity-service-qti       u:object_r:vendor_hal_identity_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@3\.0-service-qti         u:object_r:vendor_hal_keymaster_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@4\.0-service-qti         u:object_r:vendor_hal_keymaster_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@4\.1-service-qti         u:object_r:vendor_hal_keymaster_qti_exec:s0
@@ -303,7 +303,7 @@
 /data/vendor/nfc(/.*)?                 u:object_r:vendor_nfc_vendor_data_file:s0
 /data/vendor/radio(/.*)?               u:object_r:vendor_radio_vendor_data_file:s0
 /data/vendor/wifi/wlan_logs(/.*)?      u:object_r:vendor_wifi_vendor_log_data_file:s0
-/data/vendor/log/wifi(/.*)?            u:object_r:vendor_log_wifi_data_file:s0
+/data/vendor/log(/.*)?                 u:object_r:vendor_log_file:s0
 /data/vendor/ramdump(/.*)?             u:object_r:vendor_ramdump_vendor_data_file:s0
 /data/vendor/ssrdump(/.*)?             u:object_r:vendor_ramdump_vendor_data_file:s0
 /data/vendor/pddump(/.*)?              u:object_r:vendor_pddump_data_file:s0
@@ -322,6 +322,7 @@
 
 /data/vendor/mdmhelperdata(/.*)?       u:object_r:vendor_mdmhelperdata_data_file:s0
 /data/vendor/bluetooth(/.*)?           u:object_r:vendor_bt_data_file:s0
+/data/vendor/imslogs(/.*)?             u:object_r:vendor_imsd_data_file:s0
 # audio_data_file
 /data/vendor/audio(/.*)? u:object_r:vendor_audio_data_file:s0
 
