@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -70,6 +70,7 @@ vendor.wlan.firmware.version     u:object_r:vendor_wifi_version:s0
 persist.vendor.usb.        u:object_r:vendor_usb_prop:s0
 ro.vendor.usb.             u:object_r:vendor_usb_prop:s0
 vendor.display.               u:object_r:vendor_display_prop:s0
+vendor.display.disable_rounded_corner_thread  u:object_r:vendor_display_prop:s0
 ro.vendor.display.            u:object_r:vendor_display_prop:s0
 persist.vendor.display.       u:object_r:vendor_display_prop:s0
 vendor.gralloc.            u:object_r:vendor_gralloc_prop:s0
@@ -130,7 +131,6 @@ vendor.display.qdcm_socket_service u:object_r:vendor_qdcmss_prop:s0
 
 #keymaster strongbox service
 vendor.keymaster.strongbox.version u:object_r:vendor_km_strongbox_version_prop:s0
-ctl.keymaster-sb-4-0               u:object_r:vendor_km_strongbox_version_prop:s0
 ctl.vendor.keymaster-sb-4-0        u:object_r:vendor_km_strongbox_version_prop:s0
 ctl.vendor.authsecret.qti-1-0      u:object_r:vendor_km_strongbox_version_prop:s0
 
@@ -143,5 +143,8 @@ ro.vendor.qti.soc_name       u:object_r:vendor_soc_name_prop:s0
 
 #kernel console log level
 persist.vendor.console.silent.config    u:object_r:vendor_console_log_level_prop:s0
+
+#qteeconnector properties
+persist.vendor.qteeconnector.           u:object_r:vendor_qteeconnector_opti_prop:s0
 
 vendor.dcvs.prop                 u:object_r:vendor_dcvs_prop:s0
