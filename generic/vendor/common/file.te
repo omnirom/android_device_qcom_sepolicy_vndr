@@ -37,6 +37,7 @@ type vendor_sysfs_fingerprint, sysfs_type, fs_type;
 type vendor_sysfs_graphics, sysfs_type, fs_type;
 type vendor_sysfs_kgsl, sysfs_type, fs_type;
 type vendor_sysfs_kgsl_proc, sysfs_type, fs_type;
+type vendor_sysfs_kgsl_shell, sysfs_type, fs_type;
 type vendor_hbtp_kernel_sysfs, sysfs_type, fs_type;
 type vendor_sysfs_irqbalance, sysfs_type, fs_type;
 type vendor_sysfs_laser, sysfs_type, fs_type;
@@ -50,6 +51,7 @@ type vendor_sysfs_msm_subsys_restart, sysfs_type, fs_type;
 type vendor_sysfs_sensors, sysfs_type, fs_type;
 type vendor_sysfs_sectouch, sysfs_type, fs_type;
 type vendor_sysfs_soc, sysfs_type, fs_type;
+type vendor_sysfs_public, sysfs_type, fs_type;
 type vendor_sysfs_scsi_host, fs_type, sysfs_type;
 type vendor_sysfs_scsi_target, fs_type, sysfs_type;
 type vendor_sysfs_slpi, fs_type, sysfs_type;
@@ -105,7 +107,7 @@ type vendor_wifihal_socket, file_type;
 type vendor_pps_socket, file_type;
 
 # imshelper_app file types
-type vendor_imshelper_app_data_file, file_type, data_file_type;
+#type vendor_imshelper_app_data_file, file_type, data_file_type;
 
 type vendor_imsd_data_file, file_type, data_file_type;
 
@@ -131,6 +133,7 @@ type vendor_persist_sensors_file, file_type, vendor_persist_type;
 type vendor_persist_time_file, file_type, vendor_persist_type;
 type vendor_persist_audio_file, file_type, vendor_persist_type;
 type vendor_persist_bluetooth_file, file_type, vendor_persist_type;
+type vendor_persist_wcnss_service_file, file_type , vendor_persist_type;
 type vendor_persist_alarm_file, file_type, vendor_persist_type;
 type vendor_persist_feature_enabler_file, file_type, vendor_persist_type;
 
