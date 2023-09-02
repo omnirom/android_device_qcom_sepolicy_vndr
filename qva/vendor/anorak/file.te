@@ -1,4 +1,4 @@
-# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2019,  The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -13,7 +13,7 @@
 #       contributors may be used to endorse or promote products derived
 #       from this software without specific prior written permission.
 #
-# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# THIS SOFTWARE IS PROVIDED"AS IS" AND ANY EXPRESS OR IMPLIED
 # WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 # MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
 # ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
@@ -24,17 +24,18 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# Changes from Qualcomm Innovation Center are provided under the following license:
+# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 
-#Define Domain
-type vendor_hal_debugutils_default, domain;
-type vendor_hal_debugutils_default_exec, exec_type, vendor_file_type, file_type;
-hal_server_domain(vendor_hal_debugutils_default, vendor_hal_debugutils)
-init_daemon_domain(vendor_hal_debugutils_default)
+# nordic node file
+type vendor_nordic_sysfs_node, sysfs_type, fs_type;
 
-permissive vendor_hal_debugutils_default;
-binder_call(vendor_hal_debugutils_server, vendor_hal_debugutils_client);
-binder_call(vendor_hal_debugutils_client, vendor_hal_debugutils_server);
-hal_attribute_hwservice(vendor_hal_debugutils,hal_debugutils_hwservice);
 
-allow domain vendor_hal_debugutils_default:fd use;
-allow domain vendor_hal_debugutils_default:fifo_file write;
+# kineticsxr file
+type vendor_kx_file, file_type, vendor_file_type;
+
+#calib file types
+type vendor_calib_file, file_type, vendor_calib_file_type;
+allow { vendor_calib_file }self:filesystem associate;
