@@ -27,7 +27,7 @@
 #
 # Changes from Qualcomm Innovation Center are provided under the following license:
 #
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 # generic/vendor_location.te - sepolicy rules for generic vendor_location modules
@@ -105,5 +105,8 @@ allow vendor_location vendor_mlid:unix_dgram_socket sendto;
 ##############
 hal_client_domain(vendor_location , vendor_hal_datafactory_qti)
 hal_client_domain(vendor_location , vendor_hal_cacertservice_qti)
+
+# allows location to access ssgtzd socket
+unix_socket_connect(vendor_location, vendor_ssgtzd, vendor_ssgtzd)
 
 crash_dump_fallback(vendor_location)
