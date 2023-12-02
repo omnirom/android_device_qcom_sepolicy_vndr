@@ -1,5 +1,5 @@
 # Board specific SELinux policy variable definitions
-SEPOLICY_PATH:= device/qcom/sepolicy_vndr
+SEPOLICY_PATH:= device/qcom/sepolicy_vndr/legacy-um
 QSSI_SEPOLICY_PATH:= device/qcom/sepolicy
 SYS_ATTR_PROJECT_PATH := $(TOP)/device/qcom/sepolicy/generic/public/attribute
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS := \
@@ -70,6 +70,10 @@ ifneq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
       BOARD_VENDOR_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/$(TARGET_SEPOLICY_DIR)
     endif
     ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+      ifneq ($(PRODUCT_SET_DEBUGFS_RESTRICTIONS),true)
+        BOARD_VENDOR_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/common/debugfs
+        BOARD_VENDOR_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/test/debugfs
+      endif
       BOARD_VENDOR_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/test
       BOARD_VENDOR_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/test/sysmonapp
       BOARD_VENDOR_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/test/mst_test_app

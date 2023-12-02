@@ -59,7 +59,7 @@ allow init configfs:lnk_file create_file_perms;
 allow init { bt_firmware_file vendor_firmware_file  firmware_file } :dir mounton;
 
 # Moved to vendor so need relabelfrom and associate permissions
-allow init { bt_firmware_file firmware_file }:filesystem  { relabelfrom  mount };
+allow init { bt_firmware_file firmware_file }:filesystem  { relabelfrom  mount unmount };
 #TODO: This should not be needed and needs to be cleaned.
 allow { bt_firmware_file firmware_file  }self:filesystem associate;
 
@@ -88,4 +88,4 @@ allow init {
 #domain_trans(init, vendor_init_exec, vendor_init);
 allow init mnt_vendor_file:lnk_file r_file_perms;
 
-allow init socket_device:sock_file { unlink setattr create };
+allow init sysfs_mmc_host:file w_file_perms;

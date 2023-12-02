@@ -68,6 +68,7 @@ vendor.qti.data.factory::IFactory                            u:object_r:hal_data
 vendor.qti.ims.factory::IImsFactory                          u:object_r:vendor_hal_imsfactory_hwservice:s0
 vendor.qti.hardware.data.connection::IDataConnection         u:object_r:hal_dataconnection_hwservice:s0
 vendor.qti.hardware.vpp::IHidlVppService                     u:object_r:hal_vpp_hwservice:s0
+::vppService                                                 u:object_r:hal_vpp_hwservice:s0
 vendor.qti.hardware.wigig.supptunnel::ISuppTunnelProvider    u:object_r:hal_wigig_hwservice:s0
 vendor.qti.hardware.wigig.netperftuner::INetPerfTuner        u:object_r:hal_wigig_npt_hwservice:s0
 vendor.qti.hardware.fstman::IFstManager                      u:object_r:hal_fstman_hwservice:s0
@@ -85,6 +86,7 @@ com.qualcomm.qti.qcril.qcrilhook::IQtiOemHook                u:object_r:hal_tele
 vendor.qti.atcmdfwd::IAtCmdFwd                               u:object_r:vendor_hal_atfwd_hwservice:s0
 com.qualcomm.qti.imsrtpservice::IRTPService                  u:object_r:hal_imsrtp_hwservice:s0
 vendor.qti.hardware.factory::IFactory                        u:object_r:vendor_hal_factory_qti_hwservice:s0
+vendor.qti.hardware.cvp::ICvp                                u:object_r:hal_cvp_hwservice:s0
 vendor.qti.hardware.display.allocator::IQtiAllocator         u:object_r:hal_graphics_allocator_hwservice:s0
 vendor.qti.hardware.display.composer::IQtiComposer           u:object_r:hal_graphics_composer_hwservice:s0
 vendor.qti.hardware.soter::ISoter                            u:object_r:hal_soter_hwservice:s0
@@ -113,3 +115,4 @@ vendor.qti.hardware.qseecom::IQSEECom                        u:object_r:hal_qsee
 vendor.qti.hardware.perf::IPerfCallback                      u:object_r:hal_perfcallback_hwservice:s0
 vendor.qti.hardware.dsp::IDspService                         u:object_r:vendor_hal_dspmanager_hwservice:s0
 vendor.qti.hardware.qccvndhal::IQccvndhal                     u:object_r:vendor_hal_qccvndhal_hwservice:s0
+vendor.qti.hardware.slmadapter::ISlmAdapter                  u:object_r:vendor_hal_slmadapter_hwservice:s0

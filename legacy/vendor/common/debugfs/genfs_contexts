@@ -25,5 +25,4 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-[@SSG]
-ALL : device/qcom/sepolicy_vndr/legacy-um/legacy/vendor/ssg/ssg_app_cert.x509.pem
+genfscon debugfs /kgsl/proc u:object_r:qti_debugfs:s0
