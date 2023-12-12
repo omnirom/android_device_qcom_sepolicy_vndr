@@ -24,9 +24,7 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
 # Changes from Qualcomm Innovation Center are provided under the following license:
-#
 # Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
@@ -112,6 +110,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.secure_element@1\.2-service            u:object_r:hal_secure_element_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@2\.[0-2]-service        u:object_r:vendor_hal_perf_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf-hal-service             u:object_r:vendor_hal_perf_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.AGMIPC@1\.0-service          u:object_r:vendor_agmservice_qti_exec:s0
 /(vendor|system/vendor)/bin/mm-audio-ftm                                           u:object_r:vendor_audioftm_exec:s0
 /(vendor|system/vendor)/bin/qrtr-ns                                                u:object_r:vendor_qrtr_exec:s0
 /(vendor|system/vendor)/bin/spdaemon                                               u:object_r:vendor_spdaemon_exec:s0
