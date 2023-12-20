@@ -35,3 +35,7 @@ persist.vendor.biometricsface.pr u:object_r:vendor_face3d_producer_prop:s0
 # eSE-StrongBox
 ctl.start$vendor.ese-strongbox_4_1           u:object_r:vendor_ese_strongbox_prop:s0
 ctl.stop$vendor.ese-strongbox_4_1            u:object_r:vendor_ese_strongbox_prop:s0
+
+#umd
+persist.vendor.umdadaptor.mode               u:object_r:vendor_umd_prop:s0
+persist.vendor.umd.                          u:object_r:vendor_umd_prop:s0
