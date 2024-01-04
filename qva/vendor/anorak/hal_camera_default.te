@@ -46,6 +46,8 @@ get_prop(hal_camera_default, vendor_qvr_prop)
 get_prop(hal_camera_default, vendor_qvr_persist_prop)
 get_prop(hal_camera_default, vendor_qvrd_persist_prop)
 
+allow hal_camera_default vendor_qvrd_vndr:unix_stream_socket { connectto };
+allow hal_camera_default vendor_qvrd_vndr:fd use;
 
 # Allow access to thermal
 binder_call(hal_camera_default, hal_thermal);
