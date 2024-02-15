@@ -43,3 +43,6 @@ hal_client_domain(platform_app, vendor_hal_pasrmanager)
 
 # allow platform_app access to NFC service
 allow platform_app nfc_service:service_manager find;
+
+# allow platform_app access to DSP HAL
+hal_client_domain(platform_app, vendor_hal_dspmanager)
