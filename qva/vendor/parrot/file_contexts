@@ -33,4 +33,4 @@
 ###################################
 #Dev nodes
 #
-/dev/stsafe320_gpio                     u:object_r:vendor_ese_gpio_device:s0
+/dev/st54spi_gpio                     u:object_r:vendor_ese_gpio_device:s0
