@@ -5,6 +5,9 @@ typeattribute hal_camera_default mlstrustedsubject;
 
 hal_server_domain(hal_camera_default, vendor_hal_qvrservice_qti)
 
+hal_server_domain(hal_camera_default, vendor_hal_qvrcamservice_qti)
+
+
 allow hal_camera_default vendor_hal_qvrservice_qti_socket_client:unix_stream_socket { getopt read setopt shutdown write };
 
 allow vendor_hal_qvrservice_qti_socket_fd_use_client hal_camera_default: fd use;
