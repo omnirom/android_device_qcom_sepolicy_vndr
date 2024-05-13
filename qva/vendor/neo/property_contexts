@@ -35,3 +35,6 @@ vendor.keymint.quickboot     u:object_r:vendor_tee_keymint_quickboot:s0
 
 #Gatekeeper quickboot prop
 vendor.gatekeeper.quickboot  u:object_r:vendor_tee_gk_quickboot:s0
+
+# Qseecomd hibernate prop
+vendor.qseecomd.hibernate    u:object_r:vendor_tee_keymint_quickboot:s0
