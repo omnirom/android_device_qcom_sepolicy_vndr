@@ -195,3 +195,5 @@ get_prop(vendor_qvrd_vndr, vendor_mpctl_prop)
 allow vendor_qvrd_vndr proc_uptime:file r_file_perms;
 unix_socket_connect(vendor_qvrd_vndr, logdr, logd)
 
+allow vendor_qvrd_vndr vendor_qvrd_vndr_camera_socket:sock_file rw_file_perms;
+allow vendor_qvrd_vndr vendor_hal_qvrd_camservice:service_manager { add find };
