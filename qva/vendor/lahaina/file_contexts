@@ -26,7 +26,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022-2023,2024 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.face@1\.0-service    u:object_r:vendor_biometricsface_exec:s0
@@ -59,3 +59,11 @@
 
 #uac
 /dev/snd/pcmC[1-9].*  u:object_r:vendor_pcm_device:s0
+
+/vendor/bin/featuremanager    u:object_r:vendor_sec_featuremanager_exec:s0
+/vendor/bin/cloudagent        u:object_r:vendor_sec_cloudagent_exec:s0
+/vendor/bin/provisioningmanager    u:object_r:vendor_sec_provisioningmanager_exec:s0
+/vendor/bin/datamanager       u:object_r:vendor_sec_datamanager_exec:s0
+/vendor/bin/oras              u:object_r:vendor_sec_oras_exec:s0
+
+/data/vendor/secure-edge-control(/.*)?                              u:object_r:vendor_sec_vndr_data_file:s0
