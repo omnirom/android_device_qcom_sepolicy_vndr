@@ -1,4 +1,4 @@
-# Copyright (c) 2021, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2019, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,18 +25,8 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# Changes from Qualcomm Innovation Center, Inc. are provided under the following license:
-# Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
-# SPDX-License-Identifier: BSD-3-Clause-Clear
+#Changes from Qualcomm Innovation Center are provided under the following license:
+#Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+#SPDX-License-Identifier: BSD-3-Clause-Clear
 
-vendor.qti.hardware.qxr.IQXRCoreService/default        u:object_r:vendor_hal_qvrd_service:s0
-vendor.qti.hardware.qxr.IQXRCamService/default         u:object_r:vendor_hal_qvrd_camservice:s0
-vendor.qti.hardware.qxr.IQXRModService/default         u:object_r:vendor_hal_qvrd_service:s0
-vendor.qti.hardware.qxr.IQXRSplitService/default        u:object_r:vendor_hal_sxrd_service:s0
-vendor.qti.hardware.qxr.IQXRAudioService/default        u:object_r:vendor_hal_sxrd_service:s0
-vendor.qti.gnss.ILocAidlGnss/default                   u:object_r:hal_gnss_service:s0
-vendor.qti.hardware.data.connectionfactory.IFactory/slot0 u:object_r:vendor_hal_dataconnection_service:s0
-vendor.qti.hardware.data.connectionfactory.IFactory/slot1 u:object_r:vendor_hal_dataconnection_service:s0
-android.hardware.security.keymint.IKeyMintDevice/strongbox                      u:object_r:hal_keymint_service:s0
-android.hardware.security.sharedsecret.ISharedSecret/strongbox                  u:object_r:hal_sharedsecret_service:s0
-android.hardware.security.keymint.IRemotelyProvisionedComponent/strongbox       u:object_r:hal_keymint_service:s0
+type vendor_ese_gpio_device, dev_type;

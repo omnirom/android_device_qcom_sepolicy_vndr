@@ -24,9 +24,7 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
 # Changes from Qualcomm Innovation Center are provided under the following license:
-#
 # Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
@@ -73,7 +71,7 @@
 /dev/socket/qcc_trd(/.*)?                       u:object_r:vendor_qcc_trd_socket:s0
 /dev/socket/qesd                                u:object_r:vendor_qesd_socket:s0
 /dev/socket/qvrservice_vndr                     u:object_r:vendor_qvrd_vndr_socket:s0
-/dev/socket/qvrservice_vndr_camera              u:object_r:vendor_qvrd_vndr_socket:s0
+/dev/socket/qvrservice_vndr_camera              u:object_r:vendor_qvrd_vndr_camera_socket:s0
 /dev/socket/sxrservice_vndr                     u:object_r:vendor_sxrd_vndr_socket:s0
 
 /dev/smcinvoke                                  u:object_r:tee_device:s0
