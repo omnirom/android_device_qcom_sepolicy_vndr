@@ -32,6 +32,12 @@
 #Allow /dev/dma_heap file access
 allow vendor_sxrd_vndr dmabuf_system_heap_device:chr_file { getattr read open ioctl };
 
+#Allow open, read and write permission to USB node
+allow vendor_sxrd_vndr vendor_at_device:chr_file { open read write };
+
+#Allow search, open, read and write permissin to FFS dir/node
+allow vendor_sxrd_vndr functionfs:dir { search };
+allow vendor_sxrd_vndr functionfs:file { open read write };
 #Allow access to video files
 set_prop(vendor_sxrd_vndr, vendor_video_prop)
 
