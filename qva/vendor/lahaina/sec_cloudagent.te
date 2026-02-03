@@ -14,11 +14,9 @@ vndbinder_use(vendor_sec_cloudagent)
 add_service(vendor_sec_cloudagent, vendor_sec_cloudagent_service)
 binder_call(vendor_sec_cloudagent, servicemanager);
 
-# To allow CA to create files for storing provisioning status and read conf files
 allow vendor_sec_cloudagent vendor_sec_vndr_data_file:file { create_file_perms };
 allow vendor_sec_cloudagent vendor_sec_vndr_data_file:dir { rw_dir_perms };
 
-# To allow notification to other sec services
 allow vendor_sec_cloudagent vendor_sec_datamanager_service:service_manager find;
 binder_call(vendor_sec_cloudagent, vendor_sec_datamanager);
 
@@ -28,8 +26,6 @@ binder_call(vendor_sec_cloudagent, vendor_sec_featuremanager);
 allow vendor_sec_cloudagent vendor_sec_provisioningmanager_service:service_manager find;
 binder_call(vendor_sec_cloudagent, vendor_sec_provisioningmanager);
 
-# secca_prop cloudagent property to setup for boot order
 set_prop(vendor_sec_cloudagent, vendor_secca_prop);
 
-# To allow access to network
 net_domain(vendor_sec_cloudagent)

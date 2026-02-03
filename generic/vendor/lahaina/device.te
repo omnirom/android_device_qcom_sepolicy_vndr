@@ -24,6 +24,10 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# Changes from Qualcomm Innovation Center, Inc. are provided under the following license:
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 
 type vendor_logdump_partition, dev_type;
 type vendor_mba_debug_dev, dev_type;
@@ -35,3 +39,9 @@ type vendor_hdmi_bdg_irq_device, dev_type;
 
 #define DP-IN device
 type vendor_dp_bdg_irq_device, dev_type;
+
+#define power_state char device
+type vendor_power_state_device, dev_type;
+
+#block device for swap
+type vendor_hibernate_swap, dev_type;
